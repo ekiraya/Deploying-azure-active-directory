@@ -31,7 +31,8 @@ This tutorial outlines the implementation of on-premises Active Directory within
 this is likely the most simple step and the step you are likelly already familiar with, you just go into azure and hit create then name the group and we are ready to go
 </p>
 <p>
-![lul](https://github.com/ekiraya/Deploying-azure-active-directory/blob/main/ecosiabrowser_IebWcLdbku.png?raw=true)
+<img src="https://i.imgur.com/pU5A58S.png" alt="Microsoft Active Directory Logo"/>
+![image alt]()
 </p>
 
 <br />
