@@ -31,7 +31,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 this is likely the most simple step and the step you are likelly already familiar with, you just go into azure and hit create then name the group and we are ready to go
 </p>
 <p>
-<img src="[https://imgur.com/a/FWJPMfT](https://imgur.com/a/FWJPMfT)" height="80%" width="80%"/>
+<img src="https://imgur.com/a/FWJPMfT.png"/>
 </p>
 
 <br />
