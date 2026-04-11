@@ -1,1 +1,37 @@
-# Deploying-azure-active-directory
+<p align="center">
+<img src="https://i.imgur.com/pU5A58S.png"/>
+</p>
+
+<h1>On-premises Active Directory Deployed in the Cloud (Azure)</h1>
+This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
+
+<h2>Environments and Technologies Used</h2>
+
+- Microsoft Azure (Virtual Machines/Compute)
+- Remote Desktop
+- Active Directory Domain Services
+
+<h2>Operating Systems Used </h2>
+
+- Windows Server 2022
+- Windows 10
+- Windows 10 Enterprise
+
+<h2>High-Level Deployment and Configuration Steps</h2>
+
+- Create a resource group within azure
+- Create a windows vm that will serve as our domain controller
+- Create a virtual network that will allow us to join our clients to the domain
+- Create a window vm that will serve as our client
+- Make the client vms join the domain
+
+<h2>Create a resource group within azure</h2>
+
+<p>
+this is likely the most simple step and the step you are likelly already familiar with, you just go into azure and hit create then name the group and we are ready to go
+</p>
+<p>
+<img src="[https://imgur.com/a/FWJPMfT](https://imgur.com/a/FWJPMfT)" height="80%" width="80%"/>
+</p>
+
+<br />
