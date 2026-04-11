@@ -37,13 +37,11 @@ this is likely the most simple step and the step you are likely already familiar
 
 - Create a vm in azure with the windows 2022 os
 - fill up all the info required
-<img src="https://i.imgur.com//v5RGN4R.png" height="40%" width="40%"/>
 - Go to the network page and create a vnet
 <img src="https://i.imgur.com//PQ1nikh.png" height="40%" width="40%"/>
-</h2>
 
 <h4>Convert that same vm into a domain controller</h4>
 after doing the previous configuration you can just deploy the vm, nontheless it is not a domain controller yet
 the following steps outline the process to go from vm to dc
-- 
+
 
