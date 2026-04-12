@@ -38,22 +38,17 @@ After that finished installing, i promoted my vm to a domain controller.
 <img src="https://i.imgur.com//Z6xjiRz.png" height="25%" width="25%"/>
 
 <br>
-To allow users to connect to our domain, I created a second vm with the Windows 10 Enterprise os
+To allow users to connect to our domain, I created a second vm with the Windows 10 Enterprise os.
 <img src="https://i.imgur.com//2l9mYT0.png" height="25%" width="25%"/>
 
 <br>
-Afterwards i configured our client vm so that it had the same vnet as our domain controller
-<img src="https://imgur.com/a/EKWFCyK.png" height="25%" width="25%"/>
+Afterwards i configured our client vm so that it had the same vnet as our domain controller.
+<img src="https://imgur.com/0NRjpAn.png" height="25%" width="25%"/>
 
 <br>
-Once the client vm finished creating, i went inside its dns settings and i ensure its dns server was pointing to our domain controller ip
-<img src="https://imgur.com/a/EKWFCyK.png" height="25%" width="25%"/>
+Once the client vm finished creating, i went inside its dns settings and i ensure its dns server was pointing to our domain controller ip.
+<img src="https://imgur.com/nGhtotO.png" height="25%" width="25%"/>
 
-With everything functioning, I designed the whole UI to make it user-friendly and appealing.
+To join my client vm to our domain i remote desktop to it, went into its settings and with my admin account 
 
-Finally, I added testing with Cypress and Testing Library. I conducted end-to-end tests on drawing and manipulating text, lines, rectangles, and freehand drawings to make sure everything worked smoothly.
-
-Along the way, while building everything, I took notes on what I've learned so I don't miss out on it. I also documented the behind-the-scenes processes every time a feature was added.
-
-This way, I understood what I've built. The funny thing is, as soon as I started to document what happened behind the scenes and the features I've added, it made me realize that we fully understand something once we've actually taken a step back, thought about it, and documented what we've done. I think this is a good practice to follow when learning something new.
-
+And finally our client was joined into our domain controller
