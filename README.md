@@ -23,34 +23,35 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Join the client vm to the domain
 
 <h2>Process</h2>
-I started by creating a vm in azure with the Windows Server 2022 operating system. Then, within the same window i created a vnet, that will allow us to join our client machines to the domain.
-<br>
+<p>I started by creating a vm in azure with the Windows Server 2022 operating system. Then, within the same window i created a vnet, that will allow us to join our client machines to the domain.</p>
 <img src="https://i.imgur.com//PQ1nikh.png" height="25%" width="25%"/>
 
-Next, I made sure the ip of my domain controller was static. This is important due to the fact that if this change is not made the ip of our domain controller will change every time we stop it, and thus it will make our clients unable to connect to it.
+<br>
+<p>Next, I made sure the ip of my domain controller was static. This is important due to the fact that if this change is not made the ip of our domain controller will change every time we stop it, and thus it will make our clients unable to connect to it.</p>
 
 <br>
-To make sure my virtual machine can be used as a domain controller, i had to download active directory domain services from the wizard.
+<p>To make sure my virtual machine can be used as a domain controller, i had to download active directory domain services from the wizard.</p>
 <img src="https://i.imgur.com//LpVjdrp.png" height="25%" width="25%"/>
 
 <br>
-After that finished installing, i promoted my vm to a domain controller.
+<p>After that finished installing, i promoted my vm to a domain controller.</p>
 <img src="https://i.imgur.com//Z6xjiRz.png" height="25%" width="25%"/>
+<p>For this demonstration i will be using "domain.com" as the sample domain.</p>
 
 <br>
-To allow users to connect to our domain, I created a second vm with the Windows 10 Enterprise os.
+<p>To allow users to connect to our domain, I created a second vm with the Windows 10 Enterprise os.</p>
 <img src="https://i.imgur.com//2l9mYT0.png" height="25%" width="25%"/>
 
 <br>
-Afterwards i configured our client vm so that it had the same vnet as our domain controller.
+<p>Afterwards i configured our client vm so that it had the same vnet as our domain controller.</p>
 <img src="https://imgur.com/0NRjpAn.png" height="25%" width="25%"/>
 
 <br>
-Once the client vm finished creating, i went inside its dns settings and ensured its dns server was pointing to our domain controller ip.
+<p>Once the client vm finished creating, i went inside its dns settings and ensured its dns server was pointing to our domain controller ip.</p>
 <img src="https://imgur.com/nGhtotO.png" height="25%" width="25%"/>
 
 <br>
-With both vms functioning, i remote desktop to my client vm, went into its settings and with my admin account i joined it into the domain.
+<p>With both vms functioning, i remote desktop to my client vm, went into its settings and with my admin account i joined it into the domain.</p>
 <img src="https://imgur.com/VzKDrue.png" height="25%" width="25%"/>
 
 <br>
