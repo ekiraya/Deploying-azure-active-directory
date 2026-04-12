@@ -49,6 +49,9 @@ Afterwards i configured our client vm so that it had the same vnet as our domain
 Once the client vm finished creating, i went inside its dns settings and i ensure its dns server was pointing to our domain controller ip.
 <img src="https://imgur.com/nGhtotO.png" height="25%" width="25%"/>
 
-To join my client vm to our domain i remote desktop to it, went into its settings and with my admin account 
+<br>
+With both vms functioning, i remote desktop to my client vm, went into its settings and with my admin account i joined it into the domain
+<img src="https://imgur.com/VzKDrue.png" height="25%" width="25%"/>
 
+<br>
 And finally our client was joined into our domain controller
