@@ -27,7 +27,7 @@ I started by creating a vm in azure with the Windows Server 2022 operating syste
 <br>
 <img src="https://i.imgur.com//PQ1nikh.png" height="25%" width="25%"/>
 
-Next, I made sure the ip of my domain contrller was static. This is important due to the fact that if this change is not made the ip of our domain controller will change every time we stop it, and thus making our clients unable to connect to it.
+Next, I made sure the ip of my domain controller was static. This is important due to the fact that if this change is not made the ip of our domain controller will change every time we stop it, and thus it will make our clients unable to connect to it.
 
 <br>
 To make sure my virtual machine can be used as a domain controller, i had to download active directory domain services from the wizard.
