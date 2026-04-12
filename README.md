@@ -27,9 +27,11 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 I started by creating a vm in azure with the Windows Server 2022 operating system. Then, within the same window i created a vnet, that will allow us to join our client machines to the domain.
 <br>
-<img src="https://i.imgur.com//PQ1nikh.png" height="40%" width="40%"/>
+<img src="https://i.imgur.com//PQ1nikh.png" height="25%" width="25%"/>
 
-Next, I made sure users could move elements around. This was important for adjusting drawings. After that, I added the ability to resize elements to give more control over the shapes.
+Next, I made sure the ip of my domain contrller was static. This is important due to the fact that if this change is not made the ip of our domain controller will change every time we stop it, and thus making our clients unable to connect to it.
+
+<img src="https://i.imgur.com//LDglemv.png" height="25%" width="25%"/>
 
 To make sure mistakes could be fixed, I implemented undo and redo features. I also added freehand drawing for a more natural sketching experience and a text tool to label or note on the canvas.
 
