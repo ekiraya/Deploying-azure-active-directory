@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://i.imgur.com/fMUwhTM.png" height="60%" width="60%"/>
+<img src="https://i.imgur.com/fMUwhTM.png" height="45%" width="45%"/>
 </p>
 
 <h1>On-premises Active Directory Deployed in the Cloud (Azure)</h1>
@@ -19,31 +19,37 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Create a resource group within azure
 - Create a windows vm that will serve as our domain controller and the vnet that will allow us to join our clients to the domain
 - Create a window vm that will serve as our client
 - Make the client vms join the domain
 
-<h2>Create a resource group within azure</h2>
+<h2>Process</h2>
 
-<p>
-this is likely the most simple step and the step you are likely already familiar with, you just go into azure and hit create then name the group and we are ready to go
-</p>
-<p>
-<img src="https://i.imgur.com/LICvpdS.png" height="40%" width="40%"/>
-</p>
+I started by creating a vm in azure with the Windows Server 2022 operating system. Then, within the same window i created a vnet, that will allow us to join our client machines to the domain.
+<br>
+<img src="https://i.imgur.com//PQ1nikh.png" height="40%" width="40%"/>
 
-<h2>On creating a resource group within azure</h2>
-So, i think that a lot of documentation often lacks a deeper explanation on why we need to take x step on how x steps helps us get to our final goal, in my documentation i will use the on sections after every step to describe how each of the steps we did helps us further our goal
+Next, I made sure users could move elements around. This was important for adjusting drawings. After that, I added the ability to resize elements to give more control over the shapes.
 
-in the case of creating a resource group thats mostlly just busy work, azure is platforma that offers us options to create multiple resources, but the think is that it doesnt matter which resource we want to create azure will not let us create it unless we create a resource group to place it first
+To make sure mistakes could be fixed, I implemented undo and redo features. I also added freehand drawing for a more natural sketching experience and a text tool to label or note on the canvas.
+
+To navigate larger drawings, I put in pan and zoom tools. With everything functioning, I designed the whole UI to make it user-friendly and appealing.
+
+Finally, I added testing with Cypress and Testing Library. I conducted end-to-end tests on drawing and manipulating text, lines, rectangles, and freehand drawings to make sure everything worked smoothly.
+
+Along the way, while building everything, I took notes on what I've learned so I don't miss out on it. I also documented the behind-the-scenes processes every time a feature was added.
+
+This way, I understood what I've built. The funny thing is, as soon as I started to document what happened behind the scenes and the features I've added, it made me realize that we fully understand something once we've actually taken a step back, thought about it, and documented what we've done. I think this is a good practice to follow when learning something new.
+
+
+
 
 <h2>Create a windows vm that will serve as our domain controller and the vnet that will allow us to join our clients to the domain</h2>
 
 - Create a vm in azure with the windows server 2022 os
 - fill up all the info required
 - Go to the network page and create a vnet
-<img src="https://i.imgur.com//PQ1nikh.png" height="40%" width="40%"/>
+
 
 <h4>Convert that same vm into a domain controller</h4>
 after doing the previous configuration you can just deploy the vm, nontheless it is not a domain controller yet
