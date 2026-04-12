@@ -42,6 +42,16 @@ this is likely the most simple step and the step you are likely already familiar
 
 <h4>Convert that same vm into a domain controller</h4>
 after doing the previous configuration you can just deploy the vm, nontheless it is not a domain controller yet
-the following steps outline the process to go from vm to dc
+to turn it into one we need to do some extra steps
+first of all we need to download active directory domain services from the wizard
+<img src="https://i.imgur.com//LpVjdrp.png" height="40%" width="40%"/>
+and after that finishes intalling we need to promote our vm to dc, which we can do from the little flag on the corner
+<img src="https://i.imgur.com//Z6xjiRz.png" height="40%" width="40%"/>
+after that we will be asked to name our domain, this name is going to be the name of our root domain from which we can create subdomains if we want to
+<img src="https://i.imgur.com//ErdIU8O.png" height="40%" width="40%"/>
+then we are going to be asked to create a directory service restore mode password, which is basically an emergency password that we are likely to never use, so we can use literally any password we want, it really doesnt matter
+<img src="https://i.imgur.com//NaRInvV.png" height="40%" width="40%"/>
+after that we can just hit next a couple of times and we are ready to go
+
 
 
