@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://i.imgur.com/pU5A58S.png"/>
+<img src="https://i.imgur.com/fMUwhTM.png" height="60%" width="60%"/>
 </p>
 
 <h1>On-premises Active Directory Deployed in the Cloud (Azure)</h1>
@@ -51,7 +51,7 @@ after that we will be asked to name our domain, this name is going to be the nam
 <img src="https://i.imgur.com//ErdIU8O.png" height="40%" width="40%"/>
 then we are going to be asked to create a directory service restore mode password, which is basically an emergency password that we are likely to never use, so we can use literally any password we want, it really doesnt matter
 <img src="https://i.imgur.com//NaRInvV.png" height="40%" width="40%"/>
-after that we can just hit next a couple of times and we are ready to go
+after that we can just hit next a couple of times and then our computer is going to restart and when it finishes restarting we are ready
 
 
 
