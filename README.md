@@ -33,7 +33,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <br>
 <p>After that finished installing, i promoted my vm to a domain controller.</p>
 <img src="https://i.imgur.com//Z6xjiRz.png" height="25%" width="25%"/>
-<p>For this demonstration i will be using "domain.com" as the sample domain.</p>
+<p>For this demonstration i will be using <code>domain.com</code> as the sample domain.</p>
 <br>
 <p>Next, I made sure the ip of my domain controller was static. This is important due to the fact that if this change is not made the ip of our domain controller will change every time we stop it, and thus it will make our clients unable to connect to it.</p>
 
