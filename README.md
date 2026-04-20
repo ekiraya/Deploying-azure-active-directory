@@ -27,9 +27,6 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <img src="https://i.imgur.com//PQ1nikh.png" height="25%" width="25%"/>
 
 <br>
-<p>Next, I made sure the ip of my domain controller was static. This is important due to the fact that if this change is not made the ip of our domain controller will change every time we stop it, and thus it will make our clients unable to connect to it.</p>
-
-<br>
 <p>To make sure my virtual machine can be used as a domain controller, i had to download active directory domain services from the wizard.</p>
 <img src="https://i.imgur.com//LpVjdrp.png" height="25%" width="25%"/>
 
@@ -37,6 +34,8 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <p>After that finished installing, i promoted my vm to a domain controller.</p>
 <img src="https://i.imgur.com//Z6xjiRz.png" height="25%" width="25%"/>
 <p>For this demonstration i will be using "domain.com" as the sample domain.</p>
+<br>
+<p>Next, I made sure the ip of my domain controller was static. This is important due to the fact that if this change is not made the ip of our domain controller will change every time we stop it, and thus it will make our clients unable to connect to it.</p>
 
 <br>
 <p>To allow users to connect to our domain, I created a second vm with the Windows 10 Enterprise os.</p>
