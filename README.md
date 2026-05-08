@@ -18,12 +18,21 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Create a windows vm that will serve as our domain controller and a vnet.
+- Create a windows vm that will serve as our domain controller
+- Configure our domain controllers ip
+- Promote our domain controller vm into an actuall domainc controller
 - Create a windows vm that will serve as our client.
 - Join the client vm to the domain
 
 <h2>Process</h2>
-<p>I started by creating a vm in azure with the Windows Server 2022 operating system. Then, within the same window i created a vnet, that will allow us to join our client machines to the domain.</p>
+<p>I started by loging in to azure portal and then going to the resource group icon. I simply lefy my course over the icon for a couple of seconds until the option "+ Create" appeared then i pressed it to create a new resouce group.</p>
+<img src="https://i.imgur.com/DWG1v40.png" height="25%" width="25%"/>
+<p>I named the resource group "ADDC_Lab" and then just select the "Review + Create"</p>
+<img src="https://i.imgur.com/gcMQds7.png" height="25%" width="25%"/>
+
+<br>
+<p>Once the resource group was created
+  creating a vm in azure with the Windows Server 2022 operating system. Then, within the same window i created a vnet, that will allow us to join our client machines to the domain.</p>
 <img src="https://i.imgur.com//PQ1nikh.png" height="25%" width="25%"/>
 
 <br>
