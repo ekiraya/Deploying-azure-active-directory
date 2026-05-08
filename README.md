@@ -25,15 +25,33 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Join the client vm to the domain
 
 <h2>Process</h2>
-<p>I started by loging in to azure portal and then going to the resource group icon. I simply lefy my course over the icon for a couple of seconds until the option "+ Create" appeared then i pressed it to create a new resouce group.</p>
+<p>I started by loging in to azure portal and then going to the resource group icon. I simply hover the icon with my coursor for a couple of seconds until the option "+ Create" appeared then i pressed it to create a new resouce group.</p>
 <img src="https://i.imgur.com/DWG1v40.png" height="25%" width="25%"/>
-<p>I named the resource group "ADDC_Lab" and then just select the "Review + Create"</p>
+<p>I named the resource group "ADDC_Lab" and then just select the "Review + Create" option</p>
 <img src="https://i.imgur.com/gcMQds7.png" height="25%" width="25%"/>
 
 <br>
-<p>Once the resource group was created
-  creating a vm in azure with the Windows Server 2022 operating system. Then, within the same window i created a vnet, that will allow us to join our client machines to the domain.</p>
-<img src="https://i.imgur.com//PQ1nikh.png" height="25%" width="25%"/>
+<p>The whole point of using active directory is to be able to manage our client vms from the domain controller, to achive this we must ensure both our dc and client vms can communicate with each other, and to achive that we need to create a vnet or virtual network</p>
+<p>To do that again we simply need to hover the virtual network icon with our coursor and when the option "+ Create" appears simply click it to create a new vnet</p>
+<img src="https://i.imgur.com/lfAHn4b.png" height="25%" width="25%"/>
+<p>Then we simply have to set the resource group to our already created "ADDC_Lab" resource group</p>
+<p>And name our vnet, in my case ill name it "ADDC_Lab_vnet"</p>
+<img src="https://i.imgur.com/2AtFv1x.png" height="25%" width="25%"/>
+<p>Finally we just create our vnet by selecting the "Review + Create" option</p>
+
+<br>
+<p>We then need to create a vm that we will be using as our domain controller.</p>
+<p>To create one we simply need to hover the "virtual machines" icon with our coursor and when the option "+ Create" appears simply click it and select "Virtual Machines" to create a new virtual machine</p>
+<img src="https://i.imgur.com/EPDovce.png" height="25%" width="25%"/>
+<p>In the "Create a virtual machine" page that will apear afterwards we need to do the following:</p>
+<p>Set the resource group of the vm to "ADDC_Lab"</p>
+<p>Give the machine the "dc" name</p>
+<img src="https://i.imgur.com/627hCtQ.png" height="25%" width="25%"/>
+<p>Use "Windows Server 2022 Datacenter - x64 Gen2" as our image</p>
+<p>Set the username and password to anyone of your choice and click next until you get to the networking tab</p>
+<img src="https://i.imgur.com/0UGeUAI.png" height="25%" width="25%"/>
+<p>There just set our vnets virtual network to the "ADDC_Lab_vnet" we created earlier and select "Review + Create"</p>
+<img src="https://i.imgur.com/rDCaYRs.png" height="25%" width="25%"/>
 
 <br>
 <p>To make sure my virtual machine can be used as a domain controller, i had to download active directory domain services from the wizard.</p>
