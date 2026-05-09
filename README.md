@@ -3,7 +3,7 @@
 </p>
 
 <h1>Active Directory Deployed in the Cloud (Azure)</h1>
-This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
+<p>Active directory is a service developed by microsoft that allows admins to centrally store and athentificate objects that clients, meaning computers joined to the system can access. In this tutorial ill explain how to deploy such service in azure</p>
 
 <h2>Environments and Technologies Used</h2>
 
@@ -25,14 +25,15 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Join the client vm to the domain
 
 <h2>Create a resource group</h2>
-<p>I started by loging in to azure portal and then going to the resource group icon. I simply hover the icon with my coursor for a couple of seconds until the option "+ Create" appeared then i pressed it to create a new resouce group.</p>
+<p>To create any resource azure we need to first create a resource group where that reshource will be created</p>
+<p>To do that we have to start by loging in to azure portal and then going to the resource group icon. We simply hover the icon with the coursor for a couple of seconds until the option "+ Create" appeares then, presse it to create a new resouce group.</p>
 <img src="https://i.imgur.com/DWG1v40.png" height="25%" width="25%"/>
-<p>I named the resource group "ADDC_Lab" and then just select the "Review + Create" option</p>
+<p>We named the resource group "ADDC_Lab" and then just select the "Review + Create" option</p>
 <img src="https://i.imgur.com/gcMQds7.png" height="25%" width="25%"/>
 
 <h2>Create a vnet</h2>
-<p>The whole point of using active directory is to be able to manage our client vms from the domain controller, to achive this we must ensure both our dc and client vms can communicate with each other, and to achive that we need to create a vnet or virtual network</p>
-<p>To do that again we simply need to hover the virtual network icon with our coursor and when the option "+ Create" appears simply click it to create a new vnet</p>
+<p>For the clients, that is third party computers, to be able to access our domain controller and join the domain we have to first ensure the client can comunicate with the dc. To do that we need to create a vnet or virtual network. Vnets are groups of trusted ips, that means that if we put our domain controller on a vnet any other virtual machine that joins the vnet will be able to connect securely to it</p>
+<p>To create a vnet we simply need to hover the virtual network icon with our coursor and when the option "+ Create" appears simply click it to create a new vnet</p>
 <img src="https://i.imgur.com/lfAHn4b.png" height="25%" width="25%"/>
 <p>Then we simply have to set the resource group to our already created "ADDC_Lab" resource group</p>
 <p>And name our vnet, in my case ill name it "ADDC_Lab_vnet"</p>
