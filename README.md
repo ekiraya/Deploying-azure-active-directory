@@ -3,7 +3,7 @@
 </p>
 
 <h1>Active Directory Deployed in the Cloud (Azure)</h1>
-<p>Active directory is a service developed by microsoft that allows admins to centrally store and athentificate objects that clients, meaning computers joined to the system can access. In this tutorial ill explain how to deploy such service in azure</p>
+
 
 <h2>Environments and Technologies Used</h2>
 
@@ -24,8 +24,14 @@
 - Create a windows vm that will serve as our client.
 - Join the client vm to the domain
 
+<h2>Introduction to active directory</h2>
+<p>I think its best to beging this tutorial with a little explanation of what active directory is and how it works, this will make it much easier to understand the steps coming</p>
+<p>Active directory(AD) is in a nusthsell a database that contains objects like users, passwords, policies and other assets that a company may need. Domain controller (DC) is a server/computer that serves two propuses first it stored the AD and secondlly everytime a client needs to access any resources within the AD it authentificates it. Lastlly clients are computers that are joined to the domain that can acces its users and resources</p>
+<p>Even though this tutorial doesnt outline settings such as gpos or user configurations i think it is a good idea to showcase how this system would handle such requests, yeah</p>
+
+
 <h2>Create a resource group</h2>
-<p>To create any resource azure we need to first create a resource group where that reshource will be created</p>
+<p>To create anything in azure we need to first create a resource group where that resource will be created</p>
 <p>To do that we have to start by loging in to azure portal and then going to the resource group icon. We simply hover the icon with the coursor for a couple of seconds until the option "+ Create" appeares then, presse it to create a new resouce group.</p>
 <img src="https://i.imgur.com/DWG1v40.png" height="25%" width="25%"/>
 <p>We named the resource group "ADDC_Lab" and then just select the "Review + Create" option</p>
