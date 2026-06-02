@@ -73,7 +73,9 @@
 <br>
 <p>Next, I made sure the ip of my domain controller was static. This is important due to the fact that if this change is not made the ip of our domain controller will change every time we stop it, and thus it will make our clients unable to connect to it.</p>
 
-<br>
+<h2>Join computers to the domain</h2>
+<p>add that this can be done with already existing vms or we can create new ones</p>
+
 <p>To allow users to connect to our domain, I created a second vm with the Windows 10 Enterprise os.</p>
 <img src="https://i.imgur.com//2l9mYT0.png" height="25%" width="25%"/>
 
