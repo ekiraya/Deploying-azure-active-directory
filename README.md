@@ -4,6 +4,8 @@
 
 <h1>Active Directory Deployed in the Cloud (Azure)</h1>
 
+<h2>Summary</h2>
+<p>This tutorial/guide outlines how to deploy Active Directory in Azure. This tutorial also explains why every step is necessary and what each step actually does,</p>
 
 <h2>Environments and Technologies Used</h2>
 
@@ -18,11 +20,11 @@
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Create a windows vm that will serve as our domain controller
-- Configure our domain controllers ip
-- Promote our domain controller vm into an actuall domainc controller
-- Create a windows vm that will serve as our client.
-- Join the client vm to the domain
+- Create a Windows VM that will serve as our domain controller
+- Configure our domain controllers' IP
+- Promote our domain controller VM into an actual domain controller
+- Create a Windows VM that will serve as our client.
+- Join the client VM to the domain
 
 <h2>Introduction to active directory</h2>
 <p>I think its best to beging this tutorial with a little explanation of what active directory is and how it works, this will make it much easier to understand the steps coming</p>
