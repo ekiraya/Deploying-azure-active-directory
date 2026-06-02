@@ -26,10 +26,11 @@
 <p>Clients are computers that are joined to the domain that can access its users, resources, and other objects.</p>
 
 <h3>Example</h3>
-<p>Even though this tutorial doesn't outline user configuration, I think it is are worth showcasing to understand how Active Directory works.</p>
+<p>Even though this tutorial doesn't outline user configuration or file sharing, I think they are worth showcasing to understand how Active Directory works.</p>
 <p>So let's assume you already have a functioning Active Directory system with one client lets call him "client_1" joined to the domain. And client_1 is a computer used by some guy called Joe who works for the company as an accountant and needs to access certain Excel files to fulfill his daily duties.</p>
-<p>As such, Joe will take his computer every morning and use his username and password to log in. And every morning when he does that, the comain controller checks whether his user and password are the correct ones, and if they are, it returns his account that was saved in the active directory. Finally allowing him to log onto his account</p>
+<p>As such, Joe will take his computer every morning and use his username and password to log in. And every morning when he does that, the domain controller will check whether his user and password are the correct ones, and if they are, it returns his account that was saved in the Active Directory. Finally allowing him to log onto his account</p>
 <p>This process is showcased graphically in the graphic below</p>
+
 <p>Where the green lines mean request and the blue ones mean returned</p>
 
 <h2>Create a resource group</h2>
