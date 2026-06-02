@@ -5,32 +5,32 @@
 <h1>Active Directory Deployed in the Cloud (Azure)</h1>
 
 <h2>Summary</h2>
-<p>This tutorial/guide outlines how to deploy Active Directory in Azure. This tutorial also explains why every step is necessary and what each step actually does,</p>
+<p>This tutorial/guide outlines how to deploy Active Directory in Azure. This tutorial also explains why every step is necessary and what each step actually does.</p>
 
 <h2>Environments and Technologies Used</h2>
 
 - Microsoft Azure (Virtual Machines/Computers)
 - Remote Desktop
 - Active Directory Domain Services
+- Dns
 
 <h2>Operating Systems Used </h2>
 
 - Windows Server 2022
 - Windows 10 Enterprise
 
-<h2>High-Level Deployment and Configuration Steps</h2>
-
-- Create a Windows VM that will serve as our domain controller
-- Configure our domain controllers' IP
-- Promote our domain controller VM into an actual domain controller
-- Create a Windows VM that will serve as our client.
-- Join the client VM to the domain
-
 <h2>Introduction to active directory</h2>
-<p>I think its best to beging this tutorial with a little explanation of what active directory is and how it works, this will make it much easier to understand the steps coming</p>
-<p>Active directory(AD) is in a nusthsell a database that contains objects like users, passwords, policies and other assets that a company may need. Domain controller (DC) is a server/computer that serves two propuses first it stored the AD and secondlly everytime a client needs to access any resources within the AD it authentificates it. Lastlly clients are computers that are joined to the domain that can acces its users and resources</p>
-<p>Even though this tutorial doesnt outline settings such as gpos or user configurations i think it is a good idea to showcase how this system would handle such requests, yeah</p>
+<p>I think it's best to begin this tutorial with a little explanation of what Active Directory, Domain Controller, and Clients are and how they work together. This will make it much easier to understand the steps coming</p>
+<p>Active Directory (AD) is, in essence, a database that contains objects like users, passwords, policies, and other assets that a company may need.</p>
+<p>A domain controller (DC) is a server/computer that serves two purposes: first, it stores the AD, and secondly, every time a client needs to access any resources within the AD, it authenticates it.</p>
+<p>Clients are computers that are joined to the domain that can access its users, resources, and other objects.</p>
 
+<h3>Example</h3>
+<p>Even though this tutorial doesn't outline user configuration, I think it is are worth showcasing to understand how Active Directory works.</p>
+<p>So let's assume you already have a functioning Active Directory system with one client lets call him "client_1" joined to the domain. And client_1 is a computer used by some guy called Joe who works for the company as an accountant and needs to access certain Excel files to fulfill his daily duties.</p>
+<p>As such, Joe will take his computer every morning and use his username and password to log in. And every morning when he does that, the comain controller checks whether his user and password are the correct ones, and if they are, it returns his account that was saved in the active directory. Finally allowing him to log onto his account</p>
+<p>This process is showcased graphically in the graphic below</p>
+<p>Where the green lines mean request and the blue ones mean returned</p>
 
 <h2>Create a resource group</h2>
 <p>To create anything in azure we need to first create a resource group where that resource will be created</p>
