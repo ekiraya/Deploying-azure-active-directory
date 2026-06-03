@@ -32,11 +32,11 @@
 
 <h3>Example</h3>
 <p>Even though this tutorial doesn't outline user configuration or file sharing, I think they are worth showcasing to understand how Active Directory works.</p>
-<p>So let's assume you already have a functioning Active Directory system with one client lets call him "client_1" joined to the domain. And client_1 is a computer used by some guy called Joe who works for the company as an accountant and needs to access certain Excel files to fulfill his daily duties.</p>
-<p>As such, Joe will take his computer meaning client_1 every morning and use his username and password to log in. And every morning when he does that, client_1 will request the domain controller to validate that account, meaning check if the password and username are correct, and if they are, it returns his account from Active Directory. Finally allowing him to log onto his account</p>
+<p>So let's assume you already have a functioning Active Directory system with one client lets call him "client_1" joined to the domain. And client_1 is a computer used by Joe, who works for the company as an accountant and needs to access certain Excel files to fulfill his daily duties.</p>
+<p>As such, Joe will take his computer meaning client_1 every morning and enter his username and password to log in. And every morning when he does that, client_1 will request the domain controller to validate that account, meaning check if the password and username are correct, and if they are, it looks for his account in Active Directory and hands it back to client_1, and client_1 will, in return show that account visually to joe thus finally allowing Joe to log onto his account</p>
 <p>This process is showcased graphically in the graphic below</p>
-
-<p>Where the green lines mean request and the blue ones mean returned</p>
+<img src="https://i.imgur.com/DWG1v40.png" height="25%" width="25%"/>
+<p>Where the green lines mean requests and the turquoise ones mean information that is returned</p>
 
 <h2>Create a resource group</h2>
 <p>To create anything in azure we need to first create a resource group where that resource will be created</p>
