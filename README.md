@@ -23,12 +23,17 @@
 <p>I think it's best to begin this tutorial with a little explanation of what Active Directory, Domain Controller, and Clients are and how they work together. This will make it much easier to understand the steps coming</p>
 <p>Active Directory (AD) is, in essence, a database that contains objects like users, passwords, policies, and other assets that a company may need.</p>
 <p>A domain controller (DC) is a server/computer that serves two purposes: first, it stores the AD, and secondly, every time a client needs to access any resources within the AD, it authenticates it.</p>
+
+> [!IMPORTANT]
+>The domain controller is a virtual machine that stores Active Directory. This means that even though Active Directory and the domain controller are two different components, they both work inside a single virtual machine
+
+
 <p>Clients are computers that are joined to the domain that can access its users, resources, and other objects.</p>
 
 <h3>Example</h3>
 <p>Even though this tutorial doesn't outline user configuration or file sharing, I think they are worth showcasing to understand how Active Directory works.</p>
 <p>So let's assume you already have a functioning Active Directory system with one client lets call him "client_1" joined to the domain. And client_1 is a computer used by some guy called Joe who works for the company as an accountant and needs to access certain Excel files to fulfill his daily duties.</p>
-<p>As such, Joe will take his computer every morning and use his username and password to log in. And every morning when he does that, the domain controller will check whether his user and password are the correct ones, and if they are, it returns his account that was saved in the Active Directory. Finally allowing him to log onto his account</p>
+<p>As such, Joe will take his computer meaning client_1 every morning and use his username and password to log in. And every morning when he does that, client_1 will request the domain controller to validate that account, meaning check if the password and username are correct, and if they are, it returns his account from Active Directory. Finally allowing him to log onto his account</p>
 <p>This process is showcased graphically in the graphic below</p>
 
 <p>Where the green lines mean request and the blue ones mean returned</p>
