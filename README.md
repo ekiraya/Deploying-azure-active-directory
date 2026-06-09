@@ -5,7 +5,7 @@
 <h1>Active Directory Deployed in the Cloud (Azure)</h1>
 
 <h2>Summary</h2>
-<p>This tutorial/guide outlines how to deploy Active Directory in Azure. This tutorial also explains why every step is necessary and what each step actually does.</p>
+<p>This tutorial/guide outlines how to deploy Active Directory in Azure. This tutorial also explains why each step is necessary and what it actually does.</p>
 
 <h2>Environments and Technologies Used</h2>
 
@@ -20,7 +20,7 @@
 - Windows 10 Enterprise
 
 <h2>Introduction to active directory</h2>
-<p>I think it's best to begin this tutorial with a little explanation of what Active Directory, Domain Controller, and Clients are and how they work together. This will make it much easier to understand the steps coming</p>
+<p>I think it's best to begin this tutorial with a little explanation of what Active Directory, Domain Controller, and Clients are and how they work together. This will make it much easier to understand the steps coming.</p>
 <p>Active Directory (AD) is, in essence, a database that contains objects like users, passwords, policies, and other assets that a company may need.</p>
 <p>A domain controller (DC) is a server/computer that serves two purposes: first, it stores the AD, and secondly, every time a client needs to access any resources within the AD, it authenticates it.</p>
 
@@ -31,12 +31,11 @@
 <p>Clients are computers that are joined to the domain that can access its users, resources, and other objects.</p>
 
 <h3>Example</h3>
-<p>Even though this tutorial doesn't outline user configuration or file sharing, I think they are worth showcasing to understand how Active Directory works.</p>
-<p>So let's assume you already have a functioning Active Directory system with one client lets call him "client_1" joined to the domain. And client_1 is a computer used by Joe, who works for the company as an accountant and needs to access certain Excel files to fulfill his daily duties.</p>
-<p>As such, Joe will take his computer meaning client_1 every morning and enter his username and password to log in. And every morning when he does that, client_1 will request the domain controller to validate that account, meaning check if the password and username are correct, and if they are, it looks for his account in Active Directory and returns an authentication response to client_1, and client_1 will, in return show that account visually to joe thus finally allowing Joe to log onto his account</p>
+<p>So let's assume you already have a functioning Active Directory system with one client, let's call him "client_1" joined to the domain. And client_1 is a computer used by Joe, who works for the company as an accountant.</p>
+<p>As such, Joe will take his computer meaning client_1 every morning and enter his username and password to log in. Henceforth, his username and password will be referred to as his credentials. And every morning when he does that, client_1 will request the domain controller to validate those credentials, meaning check in Active Directory whether that user exists and whether the entered password is correct. And if the credentials entered are indeed valid, it will tell client_1 to create a session for his user, and lastly, Joe will be able to log in</p>
 <p>This process is showcased graphically in the graphic below</p>
 <img src="https://i.imgur.com/ZJvMBn4.png" height="100%" width="100%"/>
-<p>Where the green lines mean requests and the turquoise ones mean information that is returned</p>
+<p>I'm outlining this example for 1 simple reason. In the following steps, I will be explaining every step we need to take to create an Active Directory system just like the one i explained. And admittedly enough, a lot of the steps may seem random at first. Nevertheless, I think that if while I explain them I refer back to this example, they will make a lot more sense</p>
 
 <h2>Create a resource group</h2>
 <p>To create anything in azure we need to first create a resource group where that resource will be created</p>
