@@ -22,7 +22,7 @@
 <h2>Introduction to active directory</h2>
 <p>I think it's best to begin this tutorial with a little explanation of what Active Directory, Domain Controller, and Clients are and how they work together. This will make it much easier to understand the steps coming.</p>
 <p>Active Directory (AD) is, in essence, a database that contains objects like users, passwords, policies, and other assets that a company may need.</p>
-<p>A domain controller (DC) is a server/computer that serves two purposes: first, it stores the AD, and secondly, every time a client needs to access any resources within the AD, it authenticates it.</p>
+<p>A domain controller (DC) is a server/computer that serves two purposes: first, it stores the AD, and secondly, every time a client needs to access any objects within the AD, like user accounts or services, it authenticates them.</p>
 
 > [!IMPORTANT]
 >The domain controller is a virtual machine that stores Active Directory. This means that even though Active Directory and the domain controller are two different components, they both work inside a single virtual machine
