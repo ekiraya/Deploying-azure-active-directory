@@ -35,13 +35,15 @@
 <p>As such, Joe will take his computer meaning client_1 every morning and enter his username and password to log in. Henceforth, his username and password will be referred to as his credentials. And every morning when he does that, client_1 will request the domain controller to validate those credentials, meaning check in Active Directory whether that user exists and whether the entered password is correct. And if the credentials entered are indeed valid, it will tell client_1 to create a session for his user, and lastly, Joe will be able to log in</p>
 <p>This process is showcased graphically in the graphic below</p>
 <img src="https://i.imgur.com/ZJvMBn4.png" height="100%" width="100%"/>
-<p>I'm outlining this example for 1 simple reason. In the following steps, I will be explaining every step we need to take to create an Active Directory system just like the one i explained. And admittedly enough, a lot of the steps may seem random at first. Nevertheless, I think that if while I explain them I refer back to this example, they will make a lot more sense</p>
+<p>I'm outlining this example for 1 simple reason. In the following steps, I will be explaining every step we need to take to create an Active Directory system just like the one i explained. And admittedly enough, a lot of the steps may seem random at first. Nevertheless, I think that if, while I explain them, I refer back to this example, they will make a lot more sense</p>
 
 <h2>Create a resource group</h2>
-<p>To create anything in azure we need to first create a resource group where that resource will be created</p>
-<p>To do that we have to start by loging in to azure portal and then going to the resource group icon. We simply hover the icon with the coursor for a couple of seconds until the option "+ Create" appeares then, presse it to create a new resouce group.</p>
+<p>Everything in Azure has to exist within a resource group. A resource group is basically a folder that we use to group different resources</p>
+<p>Virtual machines are no exception. Before we create a single one, we need to create a resource group to store them</p>
+<p>To do that, we have to start by logging in to the Azure portal and then going to the resource group icon. We simply hover the icon with the cursor for a couple of seconds until the option "+ Create" appears, and we press it to create a new resource group.</p>
 <img src="https://i.imgur.com/DWG1v40.png" height="25%" width="25%"/>
-<p>We named the resource group "ADDC_Lab" and then just select the "Review + Create" option</p>
+<p>Afterwards, a page where we can name our resource group will appear. We can name our resource group however we like, but for the case of this tutorial, I'm gonna name it "ADDC_Lab"</p>
+<p>After we chose our name then we selec the "Review + Create" option to actually create our resource group</p>
 <img src="https://i.imgur.com/gcMQds7.png" height="25%" width="25%"/>
 
 <h2>Create a vnet</h2>
