@@ -47,6 +47,9 @@
 <img src="https://i.imgur.com/gcMQds7.png" height="25%" width="25%"/>
 
 <h2>Create a vnet</h2>
+<p>A network is basically a group of computers that communicate with each other</p>
+<p>To make things simple, we can think of your average network as being physical, that is, it relies on devices that exist in the physical space where the computers on the network exist, like: routers, ethernet cables, and switches</p>
+<p>>A virtual network or vnet </p>
 <p>For the clients, that is third party computers, to be able to access our domain controller and join the domain we have to first ensure the client can comunicate with the dc. To do that we need to create a vnet or virtual network. Vnets are groups of trusted ips, that means that if we put our domain controller on a vnet any other virtual machine that joins the vnet will be able to connect securely to it</p>
 <p>To create a vnet we simply need to hover the virtual network icon with our coursor and when the option "+ Create" appears simply click it to create a new vnet</p>
 <img src="https://i.imgur.com/lfAHn4b.png" height="25%" width="25%"/>
