@@ -55,7 +55,7 @@
 <br>
 <p>To create a vnet we simply need to hover the virtual network icon with our cursor, and when the option "+ Create" appears, simply click it to create a new vnet</p>
 <img src="https://i.imgur.com/lfAHn4b.png" height="25%" width="25%"/>
-<p>Then we simply have to set the resource group to any resource group  our already created "ADDC_Lab" resource group</p>
+<p>Then we simply have to set the resource group to the resource group we are going to use for our Active Directory environment. In my case that is the "ADDC_Lab" resource group</p>
 <p>And name our vnet, in my case ill name it "ADDC_Lab_vnet"</p>
 <img src="https://i.imgur.com/2AtFv1x.png" height="25%" width="25%"/>
 <p>Finally we just create our vnet by selecting the "Review + Create" option</p>
