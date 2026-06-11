@@ -47,8 +47,10 @@
 <img src="https://i.imgur.com/gcMQds7.png" height="25%" width="25%"/>
 
 <h2>Create a vnet</h2>
-<p>A network is basically a group of computers that communicate with each other</p>
-<p>Traditionally, how a network operates is thanks to the use of a switch a </p>
+<p>A virtual network or vnet is basically a group of computers that communicate with each other</p>
+<p>We need to join all of the virtual machines that are going to be part of our Active Directory environment together in a network to allow them to communicate with each other.</p>
+<p>Going back to the example I showed earlier, we need to make sure client_1 is in the same vnet that the domain controller so that client_1 can send its credentials to the dc and the dc can send an authorization to log in to clien_1</p>
+
 <p>>A virtual network or vnet </p>
 <p>For the clients, that is third party computers, to be able to access our domain controller and join the domain we have to first ensure the client can comunicate with the dc. To do that we need to create a vnet or virtual network. Vnets are groups of trusted ips, that means that if we put our domain controller on a vnet any other virtual machine that joins the vnet will be able to connect securely to it</p>
 <p>To create a vnet we simply need to hover the virtual network icon with our coursor and when the option "+ Create" appears simply click it to create a new vnet</p>
