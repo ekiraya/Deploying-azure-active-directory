@@ -40,6 +40,8 @@
 <h2>Create a resource group</h2>
 <p>Everything in Azure has to exist within a resource group. A resource group is basically a folder that we use to group different resources</p>
 <p>Virtual machines are no exception. Before we create a single one, we need to create a resource group to store them</p>
+<p>And importantly, resources of different resource groups can not communicate with each other, so we must ensure that all of the resources for our Active Directory environment are located in the same resource group.</p>
+<br>
 <p>To do that, we have to start by logging in to the Azure portal and then going to the resource group icon. We simply hover the icon with the cursor for a couple of seconds until the option "+ Create" appears, and we press it to create a new resource group.</p>
 <img src="https://i.imgur.com/DWG1v40.png" height="25%" width="25%"/>
 <p>Afterwards, a page where we can name our resource group will appear. We can name our resource group however we like, but for the case of this tutorial, I'm gonna name it "ADDC_Lab"</p>
@@ -47,15 +49,13 @@
 <img src="https://i.imgur.com/gcMQds7.png" height="25%" width="25%"/>
 
 <h2>Create a vnet</h2>
-<p>A virtual network or vnet is basically a group of computers that communicate with each other</p>
+<p>A virtual network or vnet is basically a group of devices that communicate with each other</p>
 <p>We need to join all of the virtual machines that are going to be part of our Active Directory environment together in a network to allow them to communicate with each other.</p>
-<p>Going back to the example I showed earlier, we need to make sure client_1 is in the same vnet that the domain controller so that client_1 can send its credentials to the dc and the dc can send an authorization to log in to clien_1</p>
-
-<p>>A virtual network or vnet </p>
-<p>For the clients, that is third party computers, to be able to access our domain controller and join the domain we have to first ensure the client can comunicate with the dc. To do that we need to create a vnet or virtual network. Vnets are groups of trusted ips, that means that if we put our domain controller on a vnet any other virtual machine that joins the vnet will be able to connect securely to it</p>
-<p>To create a vnet we simply need to hover the virtual network icon with our coursor and when the option "+ Create" appears simply click it to create a new vnet</p>
+<p>To explain why this is necessary, it's worth going back to the example I showed earlier. We need to make sure client_1 is in the same vnet that the domain controller so that client_1 can send its credentials to the dc and the dc can send an authorization to log in to client_1 </p>
+<br>
+<p>To create a vnet we simply need to hover the virtual network icon with our cursor, and when the option "+ Create" appears, simply click it to create a new vnet</p>
 <img src="https://i.imgur.com/lfAHn4b.png" height="25%" width="25%"/>
-<p>Then we simply have to set the resource group to our already created "ADDC_Lab" resource group</p>
+<p>Then we simply have to set the resource group to any resource group  our already created "ADDC_Lab" resource group</p>
 <p>And name our vnet, in my case ill name it "ADDC_Lab_vnet"</p>
 <img src="https://i.imgur.com/2AtFv1x.png" height="25%" width="25%"/>
 <p>Finally we just create our vnet by selecting the "Review + Create" option</p>
