@@ -62,21 +62,22 @@
 
 <h2>Create a virtual machine to serve as our domain controller</h2>
 <p>We then need to create a vm that we will be using as our domain controller.</p>
-<p>To create one we simply need to hover the "virtual machines" icon with our coursor and when the option "+ Create" appears simply click it and select "Virtual Machines" to create a new virtual machine</p>
+<br>
+<p>To create one, we simply need to hover the "virtual machines" icon with our cursor and when the option "+ Create" appears, simply click it and select "Virtual Machines" to create a new virtual machine</p>
 <img src="https://i.imgur.com/EPDovce.png" height="25%" width="25%"/>
-<p>In the "Create a virtual machine" page that will apear afterwards we need to do the following:</p>
-<p>Set the resource group of the vm to "ADDC_Lab"</p>
-<p>Give the machine the "dc" name</p>
+<p>In the "Create a virtual machine" page that will appear afterwards, we need to do the following:</p>
+<p>Set the resource group of the vm to "ADDC_Lab" or the group we are using for this project</p>
+<p>Give the machine the "dc" name or any other appropriate name</p>
 <img src="https://i.imgur.com/627hCtQ.png" height="25%" width="25%"/>
-<p>Use "Windows Server 2022 Datacenter - x64 Gen2" as our image, we use that as our operating system because it is an operating system build specifically to be use in servers</p>
+<p>Use "Windows Server 2022 Datacenter - x64 Gen2" as our image. We use that as our operating system because it is an operating system built specifically to be used in servers</p>
 <p>Set the username and password to anyone of your choice and click next until you get to the networking tab</p>
 <img src="https://i.imgur.com/0UGeUAI.png" height="25%" width="25%"/>
-<p>There just set our vnets virtual network to the "ADDC_Lab_vnet" we created earlier and select "Review + Create"</p>
+<p>There, just set our virtual network to the "ADDC_Lab_vnet" we created earlier and select "Review + Create"</p>
 <img src="https://i.imgur.com/rDCaYRs.png" height="25%" width="25%"/>
 
-<h2>Turn our virtual machine into an actuall domain controller</h2>
-<p>Okay, so what is a domain controller to begin with? a domain controller can be thought of as a computer to store and manage other computers atributes, for instance users all the users of our domain are going to be stored on our domain controller and from our domain controller we will define policy on how those users act</p>
-
+<h2>Install the necessary attributes into our domain controller</h2>
+<p>As stated above, a domain controller is simply a computer that serves the purpose of storing ad and authenticating requests</p>
+<p>Right now our "domain controller" computer doesnt have those capabilities</p>
 <p>To make sure my virtual machine can be used as a domain controller, i had to download active directory domain services from the wizard.</p>
 <img src="https://i.imgur.com//LpVjdrp.png" height="25%" width="25%"/>
 
