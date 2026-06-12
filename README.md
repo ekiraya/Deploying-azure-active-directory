@@ -77,11 +77,19 @@
 
 <h2>Install the necessary attributes into our domain controller</h2>
 <p>As stated above, a domain controller is simply a computer that serves the purpose of storing ad and authenticating requests</p>
-<p>Right now, our "domain controller" computer doesn't have those capabilities so we are going to install them one by one starting from ad</p>
-<p>To install AD, we have to go to the, I had to download Active Directory Domain Services from the wizard.</p>
-<img src="https://i.imgur.com//LpVjdrp.png" height="25%" width="25%"/>
-
+<p>Right now, our "domain controller" computer doesn't have those capabilities, so we are going to install them one by one, starting from AD </p>
 <br>
+<p>To install AD, we have to go to the Server Manager app.</p>
+<img src="https://i.imgur.com/xIrqmPz.png" height="25%" width="25%"/>
+<p>Then to the add roles and features option</p>
+<img src="https://i.imgur.com/axxeIOb.png" height="25%" width="25%"/>
+<p>and within that window, we just hit next until we get to this page, in which we check the active directory domain services option</p>
+<img src="https://i.imgur.com/Jwa7Sc3.png" height="25%" width="25%"/>
+<p>And then we just continue to click next until we get to this page, in which we simply click install</p>
+<img src="https://i.imgur.com/7hdO3LK.png" height="25%" width="25%"/>
+<p>As I explained above AD is simply a database, so right now in our domain controller, we have the database installed. Nevertheless, our domain controller still isn't really a domain controller because it cannot handle and authenticate requests</p>
+
+
 <p>After that finished installing, i promoted my vm to a domain controller.</p>
 <img src="https://i.imgur.com//Z6xjiRz.png" height="25%" width="25%"/>
 <p>For this demonstration i will be using <code>domain.com</code> as the sample domain.</p>
