@@ -77,8 +77,8 @@
 
 <h2>Install the necessary attributes into our domain controller</h2>
 <p>As stated above, a domain controller is simply a computer that serves the purpose of storing ad and authenticating requests</p>
-<p>Right now our "domain controller" computer doesnt have those capabilities</p>
-<p>To make sure my virtual machine can be used as a domain controller, i had to download active directory domain services from the wizard.</p>
+<p>Right now, our "domain controller" computer doesn't have those capabilities so we are going to install them one by one starting from ad</p>
+<p>To install AD, we have to go to the, I had to download Active Directory Domain Services from the wizard.</p>
 <img src="https://i.imgur.com//LpVjdrp.png" height="25%" width="25%"/>
 
 <br>
