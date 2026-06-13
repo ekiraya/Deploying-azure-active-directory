@@ -87,13 +87,21 @@
 <img src="https://i.imgur.com/Jwa7Sc3.png" height="25%" width="25%"/>
 <p>And then we just continue to click next until we get to this page, in which we simply click install</p>
 <img src="https://i.imgur.com/7hdO3LK.png" height="25%" width="25%"/>
-<p>As I explained above AD is simply a database, so right now in our domain controller, we have the database installed. Nevertheless, our domain controller still isn't really a domain controller because it cannot handle and authenticate requests</p>
+<br>
+<p>So right now in our domain controller, we have the database installed. Nevertheless, our domain controller still isn't really a domain controller because it cannot handle and authenticate requests</p>
+<p>Now, before we get into the practical steps, I will explain what our domain controller actually lacks</p>
+<p>1. It lacks a DNS server</p>
+<p>A Domain Name System or DNS server is basically a computer that hosts records containing IP addresses and human-readable name pairs</p>
+<p>This is relevant because a machine doesn't understand what Google.com is; it just understands IP addresses. So if a computer wants to browse to Google.com, it needs to know what the Google.com IP address is. Now computers do have internal records that have human-readable names and IP address pairs, but those often don't contain web apps like Google. So what will happen when a user wants to use a computer to browse to google.com is that it will first try to look in its internal DNS and when it fails to find it there will try to look for a DNS server who has an entry for google.com</p>
+
+<P>And when a computer wants to connect to google.com the user will type google.com in the web browser, and the computer will look in its local records to see what the ip address of google.com is, and when it doesn't find it it will look in its assigned DNS server if there is an entry for google.com, where it will find that google.com has the 172.217.162.142 IP. Lastly, with that knowledge, it will redirect the user to </P>
+
+<p>As I explained, the connection between clients and the domain controller is a core component of an Active Directory system. But a client doesn't know from the beginning what computer we are using as our dc and so </p>
 
 
-<p>After that finished installing, i promoted my vm to a domain controller.</p>
-<img src="https://i.imgur.com//Z6xjiRz.png" height="25%" width="25%"/>
 <p>For this demonstration i will be using <code>domain.com</code> as the sample domain.</p>
 <br>
+
 <p>Next, I made sure the ip of my domain controller was static. This is important due to the fact that if this change is not made the ip of our domain controller will change every time we stop it, and thus it will make our clients unable to connect to it.</p>
 
 <h2>Join computers to the domain</h2>
