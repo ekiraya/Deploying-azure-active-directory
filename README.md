@@ -91,6 +91,7 @@
 <p>So right now in our domain controller, we have the database installed. Nevertheless, our domain controller still isn't really a domain controller because it cannot handle and authenticate requests</p>
 <p>Now, before we get into the practical steps, I will explain what our domain controller actually lacks</p>
 <p>1. It lacks a DNS server</p>
+<p>The internet is just a big network -> explain that</p>
 <p>A Domain Name System or DNS server is basically a computer that hosts records containing IP addresses and human-readable name pairs</p>
 <p>This is relevant because a machine doesn't understand what Google.com is; it just understands IP addresses. So if a computer wants to browse to Google.com, it needs to know what the Google.com IP address is. Now computers do have internal records that have human-readable names and IP address pairs, but those often don't contain web apps like Google. So what will happen when a user wants to use a computer to browse to google.com is that it will first try to look in its internal DNS and when it fails to find it there will try to look for a DNS server who has an entry for google.com</p>
 
