@@ -95,6 +95,10 @@
 <p>A Domain Name System or DNS server is basically a computer that hosts records containing IP addresses and human-readable name pairs</p>
 <p>This is relevant because a machine doesn't understand what Google.com is; it just understands IP addresses. So if a computer wants to browse to Google.com, it needs to know what the Google.com IP address is. Now computers do have internal records that have human-readable names and IP address pairs, but those often don't contain web apps like Google. So what will happen when a user wants to use a computer to browse to google.com is that it will first try to look in its internal DNS and when it fails to find it there will try to look for a DNS server who has an entry for google.com</p>
 
+<p>To do this, we have to go to the flag icon at the top and click it and then click promote to domain controller</p>
+<img src="https://i.imgur.com/djfSlFc.png" height="25%" width="25%"/>
+
+
 <P>And when a computer wants to connect to google.com the user will type google.com in the web browser, and the computer will look in its local records to see what the ip address of google.com is, and when it doesn't find it it will look in its assigned DNS server if there is an entry for google.com, where it will find that google.com has the 172.217.162.142 IP. Lastly, with that knowledge, it will redirect the user to </P>
 
 <p>As I explained, the connection between clients and the domain controller is a core component of an Active Directory system. But a client doesn't know from the beginning what computer we are using as our dc and so </p>
