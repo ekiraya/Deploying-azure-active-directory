@@ -81,12 +81,13 @@
 <br>
 <p>To install AD, we have to go to the Server Manager app.</p>
 <img src="https://i.imgur.com/xIrqmPz.png" height="25%" width="25%"/>
-<p>Then to the add roles and features option</p>
+<p>Then, to the add roles and features option</p>
 <img src="https://i.imgur.com/axxeIOb.png" height="25%" width="25%"/>
 <p>and within that window, we just hit next until we get to this page, in which we check the active directory domain services option</p>
 <img src="https://i.imgur.com/Jwa7Sc3.png" height="25%" width="25%"/>
 <p>And then we just continue to click next until we get to this page, in which we simply click install</p>
 <img src="https://i.imgur.com/7hdO3LK.png" height="25%" width="25%"/>
+
 <br>
 <p>So right now in our domain controller, we have the database installed. Nevertheless, our domain controller still isn't really a domain controller because it cannot handle and authenticate requests</p>
 <p>Now, before we get into the practical steps, I will explain what our domain controller actually lacks</p>
