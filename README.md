@@ -37,6 +37,9 @@
 <img src="https://i.imgur.com/ZJvMBn4.png" height="100%" width="100%"/>
 <p>I'm outlining this example for 1 simple reason. In the following steps, I will be explaining every step we need to take to create an Active Directory system just like the one i explained. And admittedly enough, a lot of the steps may seem random at first. Nevertheless, I think that if, while I explain them, I refer back to this example, they will make a lot more sense</p>
 
+<h3>DNS</h3>
+<p></p>
+
 <h2>Create a resource group</h2>
 <p>Everything in Azure has to exist within a resource group. A resource group is basically a folder that we use to group different resources</p>
 <p>Virtual machines are no exception. Before we create a single one, we need to create a resource group to store them</p>
