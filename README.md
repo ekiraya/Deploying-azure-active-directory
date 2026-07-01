@@ -38,16 +38,18 @@
 <p>I'm outlining this example for 1 simple reason. In the following steps, I will be explaining every step we need to take to create an Active Directory system just like the one i explained. And admittedly enough, a lot of the steps may seem random at first. Nevertheless, I think that if, while I explain them, I refer back to this example, they will make a lot more sense</p>
 
 <h3>DNS</h3>
-<p>If right now you browse to say google.com, what do you think your computer is doing? To you, you are simply typing a name on the browser, but on the backend a lot of important things are happening</p>
+<p>Computers and servers are identified with an IP address, which is a unique number that's assigned to a server in specific.</p>
+<p>If right now you browse to say google.com, what do you think your computer is doing? To you, you are simply typing a name on the browser, but on the backend, a lot of important things are happening</p>
 <p>For starters, google.com is a server that is a computer somewhere out in the world that's running a specific code that generates the google.com webpage</p>
 <p>Now that creates a problem, how can your computer know which server is actually the Google.com server?</p>
-<p>Well, servers are identified with an IP address, which is a unique number that's assigned to a server in specific. But then how do we know which IP address is that of google.com</p>
+<p>Well, the google.com server must have a unique IP address that we can use to connect to it. But then how do we know which IP address is that of google.com?</p>
 <p>That's where DNS servers enter. A DNS server is a server that contains pairings of human-readable names, say google.com, and IP addresses, say 172.217.160.142</p>
 
 <br>
 <p>Whenever you type google.com in your browser, what will happen is that your computer will query the DNS server assigned to it for the IP address associated with google.com. It will return to your computer the corresponding address in this case 172.217.160.142, and your web browser would browse to the 172.217.160.142 server</p>
 <p>This relationship is better explained in the following graph</p>
 <p>If you wanna test this manually, you can actually type 172.217.160.142 in your browser, and it should take you to the google.com webpage</p>
+<p>DNS servers are used, namely, to facilitate user interaction with webpages due to the simple fact that it is, of course, easier to type google.com than to type 172.217.160.142 every time you need to go to that webapge</p>
 
 <h2>Create a resource group</h2>
 <p>Everything in Azure has to exist within a resource group. A resource group is basically a folder that we use to group different resources</p>
