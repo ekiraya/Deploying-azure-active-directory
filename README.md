@@ -5,7 +5,7 @@
 <h1>Active Directory Deployed in the Cloud (Azure)</h1>
 
 <h2>Summary</h2>
-<p>This tutorial/guide outlines how to deploy Active Directory in Azure. This tutorial also explains why each step is necessary and what it actually does.</p>
+<p>This guide outlines how to deploy Active Directory in Azure. It also explains why each step is necessary and what it actually does.</p>
 
 <h2>Environments and Technologies Used</h2>
 
@@ -21,6 +21,22 @@
 
 <h2>Introduction to active directory</h2>
 <p>I think it's best to begin this tutorial with a little explanation of what Active Directory, Domain Controller, and Clients are and how they work together. This will make it much easier to understand the steps coming.</p>
+<p>One of the most important components of an Active Directory environment is also the DNS server. So I would start from there</p>
+
+<h3>DNS</h3>
+<p>Computers and servers are identified with an IP address, which is a unique number that's assigned to a server in specific.</p>
+<p>If right now you browse to say google.com, what do you think your computer is doing? To you, you are simply typing a name on the browser, but on the backend, a lot of important things are happening</p>
+<p>For starters, google.com is a server that is a computer somewhere out in the world that's running a specific code that generates the google.com webpage</p>
+<p>Now that creates a problem, how can your computer know which server is actually the Google.com server?</p>
+<p>Well, the google.com server must have a unique IP address that we can use to connect to it. But then how do we know which IP address is that of google.com?</p>
+<p>That's where DNS servers enter. A DNS server is a server that contains pairings of human-readable names, say google.com, and IP addresses, say 172.217.160.142</p>
+
+<br>
+<p>Whenever you type google.com in your browser, what will happen is that your computer will query the DNS server assigned to it for the IP address associated with google.com. It will return to your computer the corresponding address in this case 172.217.160.142, and your web browser would browse to the 172.217.160.142 server</p>
+<p>This relationship is better explained in the following graph</p>
+<p>If you wanna test this manually, you can actually type 172.217.160.142 in your browser, and it should take you to the google.com webpage</p>
+<p>DNS servers are used, namely, to facilitate user interaction with webpages due to the simple fact that it is, of course, easier to type google.com than to type 172.217.160.142 every time you need to go to that webapge</p>
+
 <p>Active Directory (AD) is, in essence, a database that contains objects like users, passwords, policies, and other assets that a company may need.</p>
 <p>A domain controller (DC) is a server/computer that serves two purposes: first, it stores the AD, and secondly, every time a client needs to access any objects within the AD, like user accounts or services, it authenticates them.</p>
 
@@ -37,19 +53,6 @@
 <img src="https://i.imgur.com/ZJvMBn4.png" height="100%" width="100%"/>
 <p>I'm outlining this example for 1 simple reason. In the following steps, I will be explaining every step we need to take to create an Active Directory system just like the one i explained. And admittedly enough, a lot of the steps may seem random at first. Nevertheless, I think that if, while I explain them, I refer back to this example, they will make a lot more sense</p>
 
-<h3>DNS</h3>
-<p>Computers and servers are identified with an IP address, which is a unique number that's assigned to a server in specific.</p>
-<p>If right now you browse to say google.com, what do you think your computer is doing? To you, you are simply typing a name on the browser, but on the backend, a lot of important things are happening</p>
-<p>For starters, google.com is a server that is a computer somewhere out in the world that's running a specific code that generates the google.com webpage</p>
-<p>Now that creates a problem, how can your computer know which server is actually the Google.com server?</p>
-<p>Well, the google.com server must have a unique IP address that we can use to connect to it. But then how do we know which IP address is that of google.com?</p>
-<p>That's where DNS servers enter. A DNS server is a server that contains pairings of human-readable names, say google.com, and IP addresses, say 172.217.160.142</p>
-
-<br>
-<p>Whenever you type google.com in your browser, what will happen is that your computer will query the DNS server assigned to it for the IP address associated with google.com. It will return to your computer the corresponding address in this case 172.217.160.142, and your web browser would browse to the 172.217.160.142 server</p>
-<p>This relationship is better explained in the following graph</p>
-<p>If you wanna test this manually, you can actually type 172.217.160.142 in your browser, and it should take you to the google.com webpage</p>
-<p>DNS servers are used, namely, to facilitate user interaction with webpages due to the simple fact that it is, of course, easier to type google.com than to type 172.217.160.142 every time you need to go to that webapge</p>
 
 <h2>Create a resource group</h2>
 <p>Everything in Azure has to exist within a resource group. A resource group is basically a folder that we use to group different resources</p>
